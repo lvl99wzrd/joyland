@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Regular.woff2') format('woff2'),
+        url('Karla-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Italic.woff2') format('woff2'),
+        url('Karla-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-Bold.woff2') format('woff2'),
+        url('Karla-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Karla-BoldItalic.woff2') format('woff2'),
+        url('Karla-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grotesk Remix';
+    src: url('GroteskRemix-Medium.woff2') format('woff2'),
+        url('GroteskRemix-Medium.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Grotesk Remix';
+    src: url('GroteskRemix-Bold.woff2') format('woff2'),
+        url('GroteskRemix-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+

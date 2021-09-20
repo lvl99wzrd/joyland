@@ -1,0 +1,31 @@
+$brushColors: 'blue-light', 'orange-light', 'orange-dark', 'white';
+
+.btn {
+  @apply relative inline-flex items-center justify-center focus:outline-none py-2 px-4 font-display uppercase text-white;
+
+  &-lg {
+    @apply text-lg py-3 px-5;
+  }
+  
+  &-brush {
+    @apply p-0;
+    border: 0.5rem solid transparent;
+
+    @each $color in $brushColors {
+      &-#{$color} {
+        border-image: url('~@/assets/img/brush-#{$color}.svg') 20% stretch;
+
+        span {
+          z-index: 1;
+          margin-top: 1.75px;
+        }
+        
+        &::before {
+          content: '';
+          z-index: 0;
+          @apply absolute -inset-1 bg-#{$color};
+        }
+      }
+    }
+  }
+}

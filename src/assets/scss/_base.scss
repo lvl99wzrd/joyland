@@ -1,0 +1,28 @@
+html {
+  @apply text-gray-800 bg-orange-light font-body;
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+  --logo-color: theme('colors.orange.light');
+  --logo-hover-color: theme('colors.blue.light');
+}
+
+body {
+  @apply overflow-x-hidden;
+
+  &.offcanvas-shown {
+    @apply overflow-y-hidden;
+
+    #appWrapper {
+      transform: translateX(13rem);
+    }
+  }
+}
+
+#appWrapper {
+  @apply w-full transition-transform duration-500 ease-in-out;
+}
+
+#appMain {
+  @apply relative block pt-16 md:pt-20;
+}

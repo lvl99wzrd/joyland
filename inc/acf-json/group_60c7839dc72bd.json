@@ -1,0 +1,283 @@
+{
+    "key": "group_60c7839dc72bd",
+    "title": "Home Page Settings",
+    "fields": [
+        {
+            "key": "field_60c783ae86eaa",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60c78c2b18578",
+            "label": "Hero",
+            "name": "hero",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_60c783bb86eab",
+                    "label": "Event Date",
+                    "name": "event_date",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60c783e686eac",
+                    "label": "Event Location",
+                    "name": "event_location",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60c783ef86ead",
+            "label": "Line Up",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60c783fa86eae",
+            "label": "Line Up",
+            "name": "lineups",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "lineup"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 4,
+            "return_format": "id"
+        },
+        {
+            "key": "field_613499de37ecb",
+            "label": "Video",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_613499ee37ecc",
+            "label": "Video",
+            "name": "video",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_613499fd37ecd",
+                    "label": "Source",
+                    "name": "source",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "upload": "Upload",
+                        "youtube": "YouTube"
+                    },
+                    "default_value": "upload",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61349a8e37ece",
+                    "label": "Upload",
+                    "name": "upload",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613499fd37ecd",
+                                "operator": "==",
+                                "value": "upload"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_61349aa237ecf",
+                    "label": "YouTube Video",
+                    "name": "youtube",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613499fd37ecd",
+                                "operator": "==",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60c7843286eb1",
+            "label": "Playlist",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60c784a386eb2",
+            "label": "Playlist URL",
+            "name": "playlist",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "page_attributes",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1630837469
+}

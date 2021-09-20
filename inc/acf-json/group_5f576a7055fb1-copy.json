@@ -1,0 +1,85 @@
+{
+    "key": "group_5f576a7055fb1-copy",
+    "title": "Page Display",
+    "fields": [
+        {
+            "key": "field_60c89f798eaa6",
+            "label": "Hide Title",
+            "name": "hide_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f7cb780e5023",
+            "label": "Page Background Color",
+            "name": "page_bg_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#fafafa"
+        },
+        {
+            "key": "field_5f7cb7a2e5024",
+            "label": "Page Base Text Color",
+            "name": "page_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1623760776
+}

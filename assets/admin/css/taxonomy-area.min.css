@@ -1,0 +1,2 @@
+#lineups-sortable{width:95%}#lineups-sortable .lineup{display:flex;align-items:center;justify-content:space-between;padding:5px 10px;border-radius:5px;border:1px solid #8C8F94;background-color:#DEDEDE;cursor:grab;margin-bottom:5px}#lineups-sortable .lineup:hover{border-color:#3B82F6;background-color:#93C5FD;color:#1D4ED8}#lineups-sortable .lineup__placeholder{height:30px;border-radius:5px;border:1px solid #BFDBFE;background-color:#BFDBFE}#lineups-sortable .lineup__schedule{font-size:0.75rem}
+/*# sourceMappingURL=taxonomy-area.min.css.map */

@@ -1,0 +1,57 @@
+{
+    "key": "group_60c858ef414e2",
+    "title": "Line-Up Data",
+    "fields": [
+        {
+            "key": "field_60c85910b1d69",
+            "label": "Schedule",
+            "name": "schedule",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "F j, Y g:i a",
+            "first_day": 1
+        },
+        {
+            "key": "field_60c9085df3974",
+            "label": "Playlist",
+            "name": "playlist",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lineup"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629965712
+}

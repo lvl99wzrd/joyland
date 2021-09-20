@@ -1,0 +1,23 @@
+.content {
+  p {
+    @apply mb-4;
+  }
+
+  .has-medium-font-size {
+    @apply text-lg;
+  }
+
+  .has-text-align-center {
+    @apply text-center;
+  }
+}
+
+.wp-block {
+  &-image {
+    .aligncenter {
+      img {
+        @apply mx-auto;
+      }
+    }
+  }
+}
