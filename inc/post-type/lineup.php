@@ -177,12 +177,12 @@ function joy_lineup_sortable_pre_get_posts( $query ) {
 /**
  * Save lineups order
  */
-add_action( 'edit_area', 'joy_lineup_edit_area', 10, 2 );
-function joy_lineup_edit_area( $term_id, $tt_id ) {
-  if ( isset( $_POST['lineups_order'] ) ) {
-    update_term_meta( $term_id, 'lineups_order', $_POST['lineups_order'] );
-  }
+// add_action( 'edit_area', 'joy_lineup_edit_area', 10, 2 );
+// function joy_lineup_edit_area( $term_id, $tt_id ) {
+//   if ( isset( $_POST['lineups_order'] ) ) {
+//     update_term_meta( $term_id, 'lineups_order', $_POST['lineups_order'] );
+//   }
 
-  $complete = isset( $_POST['lineups_complete'] ) ? $_POST['lineups_complete'] : 0;
-  update_term_meta( $term_id, 'lineups_complete', $complete );
-}
+//   $complete = isset( $_POST['lineups_complete'] ) ? $_POST['lineups_complete'] : 0;
+//   update_term_meta( $term_id, 'lineups_complete', $complete );
+// }

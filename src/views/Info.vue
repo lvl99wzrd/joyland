@@ -85,7 +85,7 @@ export default {
   }
 
   &-sidebar {
-    @apply w-full md:w-1/4 px-4 py-16 bg-blue-dark text-white;
+    @apply w-full md:w-1/4 px-4 py-16 bg-blue-dark text-white hidden md:block;
 
     h1 {
       @apply font-display font-bold text-2xl mb-6 uppercase;

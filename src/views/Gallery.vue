@@ -64,7 +64,6 @@ export default {
         }
       })
         .then((response) => {
-          console.log(response.data)
           this.gallery = response.data[0]
           this.setPageTitle(`${this.gallery.title} Gallery`)
         })

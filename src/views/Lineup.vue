@@ -1,5 +1,9 @@
 <template>
   <div id="lineup" :class="{ 'is-detail': this.$route.params.artist }">
+    <div class="lineup-sidebar lineup-sidebar__mobile">
+      <router-link :to="{ name: 'Full Line-Ups' }">Full Line-Up</router-link>
+      <router-link :to="{ name: 'Schedule' }">Schedule</router-link>
+    </div>
     <div class="lineup-areas">
       <div class="container">
         <div v-if="areas" class="flex flex-wrap items-center justify-center -mx-2">
@@ -18,7 +22,7 @@
     </div>
     <div class="container">
       <div class="flex flex-wrap -mx-4">
-        <div class="lineup-sidebar">
+        <div class="lineup-sidebar hidden md:block">
           <div class="mb-4">
             <router-link :to="{ name: 'Full Line-Ups' }">Full Line-Up</router-link>
           </div>
@@ -131,8 +135,6 @@ export default {
 
     &-sidebar,
     &-view {
-      min-height: calc(100vh - 4rem);
-    
       @screen md {
         min-height: calc(100vh - 5rem);
       }
@@ -146,6 +148,14 @@ export default {
 
         &.is-exact {
           @apply text-orange-light;
+        }
+      }
+
+      &__mobile {
+        @apply py-6 flex items-center justify-center md:hidden;
+
+        a {
+          @apply text-lg mx-4;
         }
       }
     }

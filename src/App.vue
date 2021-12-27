@@ -7,6 +7,7 @@
       </main>
       <app-footer />
     </div>
+    <offcanvas-outside />
     <vue-progress-bar />
   </div>
 </template>
@@ -15,12 +16,14 @@
 import axios from 'axios'
 import AppHeader from './components/AppHeader'
 import AppFooter from './components/AppFooter'
+import OffcanvasOutside from './components/OffcanvasOutside'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    OffcanvasOutside
   },
   created() {
     this.loadingIndicator()

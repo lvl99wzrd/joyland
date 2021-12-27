@@ -37,7 +37,6 @@ function joy_get_app_settings() {
       'description' => get_bloginfo( 'description' ),
       'timezone'    => wp_timezone_string(),
       'host'        => $parse_url['host'],
-      // 'coming_soon' => get_theme_mod( 'joy_is_coming_soon', false ),
     ),
     'header' => array(
       'shop'      => get_theme_mod( 'joy_shop', true ),
@@ -51,7 +50,6 @@ function joy_get_app_settings() {
       'base'  => $base_url,
       'wp'    => '/wp/v2',
       'theme' => joy_rest_namespace(),
-      // 'jwt'   => $base_url . '/wp-json/jwt-auth/v1',
     ),
     'footer' => array(
       'sponsors'  => get_field( 'sponsors', 'joy_footer' ),

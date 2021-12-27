@@ -75,7 +75,7 @@
         },
         {
             "key": "field_60c783ef86ead",
-            "label": "Line Up",
+            "label": "Line-Up",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -90,8 +90,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_614f103ae1245",
+            "label": "Hide Line-Up Section",
+            "name": "hide_lineups",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60c783fa86eae",
-            "label": "Line Up",
+            "label": "Line-Up",
             "name": "lineups",
             "type": "relationship",
             "instructions": "",
@@ -131,6 +150,25 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_614f102be1244",
+            "label": "Hide Video Section",
+            "name": "hide_video",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_613499ee37ecc",
@@ -242,6 +280,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_614f1012e1243",
+            "label": "Hide Playlist Section",
+            "name": "hide_playlist",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60c784a386eb2",
             "label": "Playlist URL",
             "name": "playlist",
@@ -279,5 +336,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1630837469
+    "modified": 1632571580
 }

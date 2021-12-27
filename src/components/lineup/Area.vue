@@ -10,7 +10,7 @@
         </router-link>
       </div>
     </div>
-    <div v-if="!area.complete" class="text-center font-display text-orange-light text-2xl uppercase">More Coming Soon</div>
+    <div v-if="area.after" class="text-center font-display text-orange-light text-2xl uppercase" v-html="area.after" />
   </div>
 </template>
 
@@ -80,17 +80,21 @@ export default {
   }
 
   &__overlay {
-    @apply absolute w-full h-full top-0 left-0 transform scale-0 transition-transform duration-300 bg-black bg-opacity-50  flex items-center justify-center text-white font-display uppercase font-bold text-2xl text-center p-4;
+    @apply absolute w-full h-full top-0 left-0 transform transition-transform duration-300 bg-black bg-opacity-50 flex items-end justify-center text-white font-display uppercase font-bold text-xl text-center p-4;
+
+    @screen md {
+      @apply scale-0 items-center text-2xl;
+    }
   }
 
   &:hover {
     .lineup {
       &__photo {
-        @apply transform scale-125;
+        @apply scale-125;
       }
 
       &__overlay {
-        @apply transform scale-100;
+        @apply scale-100;
       }
     }
   }

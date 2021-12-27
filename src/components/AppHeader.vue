@@ -46,8 +46,10 @@ export default {
 
 <style lang="scss" scoped>
 #appHeader {
-  @apply fixed top-0 left-0 w-full bg-creme-dark z-50 transition-all duration-500 ease-in-out;
+  @apply fixed top-0 left-0 w-full bg-creme-dark z-50;
   box-shadow: 0 4px 6px rgba(0,0,0,.15);
+  transition: all 600ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
 
   &.offcanvas-shown {
     transform: translateX(13rem);

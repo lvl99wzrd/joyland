@@ -47,7 +47,6 @@ export default {
         }
       })
         .then(() => {
-          // console.log(response.data)
           this.subscribed = true
           this.email = null
           this.labelTop = false

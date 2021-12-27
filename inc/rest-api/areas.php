@@ -24,7 +24,7 @@ function joy_prepare_area_data( $post, $include_lineups = false ) {
     'name'        => html_entity_decode( $post->post_title ),
     'slug'        => $post->post_name,
     'description' => get_field( 'description', $post->ID ),
-    'complete'    => get_field( 'lineups_complete', $post->ID ),
+    'after'       => get_field( 'after', $post->ID ),
     'thumbnail'   => get_the_post_thumbnail_url( $post->ID, 'full' ),
     'gallery'     => get_field( 'gallery', $post->ID ),
   );

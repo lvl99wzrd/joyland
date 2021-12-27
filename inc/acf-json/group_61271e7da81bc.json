@@ -76,10 +76,10 @@
             "return_format": "id"
         },
         {
-            "key": "field_61271f2a7a435",
-            "label": "Line-Ups Complete",
-            "name": "lineups_complete",
-            "type": "true_false",
+            "key": "field_6177b30003d9b",
+            "label": "After Line-Up Text",
+            "name": "after",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -88,11 +88,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "More Coming Soon",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -112,5 +112,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629975010
+    "modified": 1635235564
 }

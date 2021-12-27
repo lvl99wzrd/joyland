@@ -41,7 +41,6 @@ export default {
         }
       })
         .then((response) => {
-          console.log(response.data)
           this.galleries = response.data
         })
         .catch((error) => {

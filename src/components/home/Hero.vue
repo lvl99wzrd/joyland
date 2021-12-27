@@ -46,7 +46,6 @@ export default {
       const rect = e.target.getBoundingClientRect()
       const x = ((e.x - Math.floor(rect.x)) / rect.width) * 100
       const y = ((e.y - Math.floor(rect.y)) / rect.height) * 100
-      // console.log(x, y)
       const xPos = 50+(x*0.1)
       const yPos = 50+(y*0.1)
       this.$refs.heroDots.style.backgroundPosition = xPos + '% ' + yPos + '%'

@@ -1,9 +1,9 @@
 <template>
   <div id="home">
     <hero-section :content="home.hero" />
-    <lineup-section :lineups="home.lineups" />
-    <video-section :video="home.video" />
-    <playlist-section :playlist="home.playlist" />
+    <lineup-section v-if="home && !home.hide.lineups" :lineups="home.lineups" />
+    <video-section v-if="home && !home.hide.video" :video="home.video" />
+    <playlist-section v-if="home && !home.hide.playlist" :playlist="home.playlist" />
   </div>
 </template>
 
@@ -39,7 +39,6 @@ export default {
         url: `${this.app.rest.theme}/home-page`
       })
         .then((response) => {
-          console.log(response.data)
           this.home = response.data
         })
         .catch((error) => {

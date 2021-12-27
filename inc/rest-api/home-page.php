@@ -33,6 +33,11 @@ function joy_get_homepage( WP_REST_Request $requests ) {
     'lineups'  => $lineups,
     'video'    => get_field( 'video', $frontpage ),
     'playlist' => get_field( 'playlist', $frontpage ),
+    'hide'     => array(
+      'lineups'  => get_field( 'hide_lineups', $frontpage ),
+      'video'    => get_field( 'hide_video', $frontpage ),
+      'playlist' => get_field( 'hide_playlist', $frontpage ),
+    ),
   );
 
   return $homepage;

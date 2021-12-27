@@ -103,7 +103,7 @@ function joy_acf_init() {
         'page_title'      => __( "Site Footer", 'joy' ),
         'menu_title'      => __( "Site Footer", 'joy' ),
         'menu_slug'       => 'joy_footer',
-        'capability'      => 'manage_options',
+        'capability'      => 'edit_others_posts',
         'post_id'         => 'joy_footer',
         'autoload'        => true,
         'update_button'   => __( "Save Settings", 'joy' ),
@@ -113,56 +113,6 @@ function joy_acf_init() {
     );
   }
 }
-
-/** Register options page for theme settings **/
-// if ( function_exists( 'acf_add_options_sub_page' ) ) {
-// 	acf_add_options_sub_page( array(
-// 		'page_title'  => 'Theme Settings',
-// 		'menu_title'  => 'Theme Settings',
-// 		'menu_slug'   => 'joy',
-// 		'post_id'     => 'joy',
-// 		'capability'  => 'manage_options',
-// 		'parent_slug' => 'options-general.php',
-// 	) );
-// }
-
-/**
- * Get nav menu items by location
- */
-// function joy_get_menu_items( $location, $args = [] ) {
-//   $locations  = get_nav_menu_locations();
-//   $object     = wp_get_nav_menu_object( $locations[$location] );
-//   $menu_items = wp_get_nav_menu_items( $object->name, $args );
-
-//   $items = [];
-//   if ( $menu_items ) {
-//     foreach ( $menu_items as $i => $menu_item ) {
-//       $base_url = site_url( '', 'https' );
-//       $parent_id = $menu_item->menu_item_parent;
-//       if ( $parent_id ) {
-//         $index = array_search( $parent_id, array_column( $items, 'id' ) );
-//         $items[ $index ]['children'][] = array(
-//           'id'     => $menu_item->ID,
-//           'parent' => $menu_item->menu_item_parent,
-//           'route'  => str_replace( $base_url, '', $menu_item->url ),
-//           'title'  => $menu_item->title,
-//         );
-//       } else {
-//         $items[] = array(
-//           'id'       => $menu_item->ID,
-//           'parent'   => $item->menu_item_parent,
-//           'route'    => str_replace( $base_url, '', $menu_item->url ),
-//           'title'    => $menu_item->title,
-//         );
-//       }
-//     }
-//   }
-
-//   return array(
-//     'clean' => $items,
-//     'raw'   => $menu_items,
-//   );
-// }
 
 /**
  * Hide default posts

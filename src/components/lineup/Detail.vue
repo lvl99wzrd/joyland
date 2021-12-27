@@ -55,7 +55,6 @@ export default {
         }
       })
         .then((response) => {
-          console.log(response.data)
           this.lineup = response.data[0]
           this.setPageTitle(`${this.lineup.area.name} - ${this.lineup.name}`)
         })
