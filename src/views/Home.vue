@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div v-if="!loading" id="home">
     <hero-section :content="home.hero" />
     <lineup-section v-if="home && !home.hide.lineups" :lineups="home.lineups" />
     <video-section v-if="home && !home.hide.video" :video="home.video" />

@@ -4,7 +4,6 @@ require_once( 'inc/acf.php' );
 require_once( 'inc/rest-api.php' );
 require_once( 'inc/block-editor.php' );
 require_once( 'inc/enqueue.php' );
-// require_once( 'inc/page-templates.php' );
 require_once( 'inc/customizer.php' );
 
 require_once( 'inc/post-type/lineup.php' );

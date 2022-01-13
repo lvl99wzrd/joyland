@@ -34,6 +34,71 @@
             "layout": "row",
             "sub_fields": [
                 {
+                    "key": "field_61de8d799981d",
+                    "label": "Background",
+                    "name": "background",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_61de8d889981e",
+                            "label": "Horizontal",
+                            "name": "horizontal",
+                            "type": "image",
+                            "instructions": "For desktop",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_61de8da59981f",
+                            "label": "Vertical",
+                            "name": "vertical",
+                            "type": "image",
+                            "instructions": "For mobile",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                },
+                {
                     "key": "field_60c783bb86eab",
                     "label": "Event Date",
                     "name": "event_date",
@@ -235,7 +300,7 @@
                     "library": "all",
                     "min_size": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "mp4"
                 },
                 {
                     "key": "field_61349aa237ecf",
@@ -322,6 +387,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "joy_home"
+            }
         ]
     ],
     "menu_order": 0,
@@ -336,5 +408,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1632571580
+    "modified": 1642049134
 }

@@ -37,3 +37,25 @@ function joy_acf_json_load_point( $paths ) {
 
 // Include ACF
 include_once( get_theme_file_path( '/inc/acf/acf.php' ) );
+
+/**
+ * Add ACF option sub page for footer settings
+ */
+add_action( 'init', 'joy_acf_init' );
+function joy_acf_init() {
+  if ( function_exists( 'acf_add_options_sub_page' ) ) {
+    acf_add_options_sub_page(
+      array(
+        'page_title'      => __( "Site Footer", 'joy' ),
+        'menu_title'      => __( "Site Footer", 'joy' ),
+        'menu_slug'       => 'joy_footer',
+        'capability'      => 'edit_others_posts',
+        'post_id'         => 'joy_footer',
+        'autoload'        => true,
+        'update_button'   => __( "Save Settings", 'joy' ),
+        'updated_message' => __( "Footer settings updated", 'joy' ),
+        'parent_slug'     => 'themes.php',
+      )
+    );
+  }
+}

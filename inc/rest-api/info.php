@@ -15,7 +15,7 @@ function joy_info_page_acf_settings() {
         'autoload'        => true,
         'update_button'   => __( "Save Settings", 'joy' ),
         'updated_message' => __( "Info settings updated", 'joy' ),
-        'position'        => 20,
+        'position'        => 9,
         'icon_url'        => 'dashicons-info-outline',
       )
     );

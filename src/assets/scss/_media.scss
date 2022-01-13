@@ -2,7 +2,9 @@
   @apply relative w-full h-0;
   padding-top: 56.25%;
 
-  iframe {
+  iframe,
+  video,
+  embed {
     @apply absolute w-full h-full top-0 left-0;
   }
 }

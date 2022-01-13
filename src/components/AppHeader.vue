@@ -5,9 +5,10 @@
         <button type="button" class="app-burgerbar" @click="toggleNav">
           <unicon name="bars" fill="currentColor" width="2rem" height="2rem" />
         </button>
-        <div class="w-32 md:w-48 h-auto px-4">
+        <div class="px-4">
           <router-link class="app-logo" :to="{ name: 'Home' }">
-            <app-logo />
+            <img v-if="app.site.logo" :src="app.site.logo">
+            <app-logo v-else class="w-28 md:w-40 h-auto" />
           </router-link>
         </div>
         <div class="flex-grow flex items-center">
@@ -62,6 +63,11 @@ export default {
 
 .app-logo {
   @apply text-orange-light hover:text-blue-light;
+
+  img {
+    width: auto;
+    max-height: 3.5rem;
+  }
 }
 
 .app-burgerbar {

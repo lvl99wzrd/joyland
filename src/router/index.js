@@ -10,12 +10,6 @@ const home = {
   component: Home
 }
 
-// const about = {
-//   path: '/about',
-//   name: 'About',
-//   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-// }
-
 const lineup = {
   path: '/lineup',
   name: '',
@@ -88,7 +82,6 @@ const page = {
 
 const routes = [
   home,
-  // about,
   lineup,
   digital,
   areas,

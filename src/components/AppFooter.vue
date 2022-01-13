@@ -3,11 +3,10 @@
     <div class="container py-6">
       <div class="flex flex-wrap items-center -mx-4">
         <div class="w-full md:w-1/5 px-4 mt-4 text-center md:text-left">
-          <ul>
-            <li><router-link to="/about">About</router-link></li>
-            <li><router-link to="/sponsors-and-partners">Sponsors & Partners</router-link></li>
-            <li><router-link to="/press">Press</router-link></li>
-            <li><router-link to="/contact-us">Contact Us</router-link></li>
+          <ul v-if="app.footer.menu.length">
+            <li v-for="item, index in app.footer.menu" :key="index">
+              <router-link :to="`/${item.slug}`">{{ item.title }}</router-link>
+            </li>
           </ul>
         </div>
         <div class="w-full md:w-3/5 px-4 mt-4 text-center">

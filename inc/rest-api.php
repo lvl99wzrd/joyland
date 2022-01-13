@@ -31,8 +31,21 @@ function joy_rest_set_title( $title ) {
 function joy_get_app_settings() {
   $base_url = site_url( 'wp-json', 'https' );
   $parse_url = parse_url( $base_url );
+
+  // Get footer menu
+  $footer_menu = get_field( 'menu', 'joy_footer' );
+  if ( $footer_menu ) {
+    $footer_menu = array_map( function( $item ) {
+      return array(
+        'slug'  => $item->post_name,
+        'title' => $item->post_title,
+      );
+    }, $footer_menu);
+  }
+
   $settings = array(
     'site' => array(
+      'logo'        => wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ),
       'title'       => get_bloginfo( 'name' ),
       'description' => get_bloginfo( 'description' ),
       'timezone'    => wp_timezone_string(),
@@ -51,7 +64,13 @@ function joy_get_app_settings() {
       'wp'    => '/wp/v2',
       'theme' => joy_rest_namespace(),
     ),
+    'lineup' => array(
+      'full'     => get_field( 'full_lineup', 'joy_lineup' ),
+      'past'     => get_field( 'past_lineup', 'joy_lineup' ),
+      'schedule' => get_field( 'schedule', 'joy_lineup' ),
+    ),
     'footer' => array(
+      'menu'      => $footer_menu,
       'sponsors'  => get_field( 'sponsors', 'joy_footer' ),
       'subscribe' => get_field( 'subscribe', 'joy_footer' ),
       'copyright' => get_field( 'copyright', 'joy_footer' ),
@@ -62,8 +81,8 @@ function joy_get_app_settings() {
 }
 
 include_once( 'rest-api/page-endpoints.php' );
-include_once( 'rest-api/home-page.php' );
-include_once( 'rest-api/about-page.php' );
+include_once( 'rest-api/home.php' );
+include_once( 'rest-api/about.php' );
 include_once( 'rest-api/pages.php' );
 include_once( 'rest-api/lineups.php' );
 include_once( 'rest-api/galleries.php' );

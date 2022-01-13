@@ -6,7 +6,7 @@
 export default {
   name: 'Lineup',
   components: {
-    stage: () => import('@/components/lineup/Area.vue'),
+    areas: () => import('@/components/lineup/Area.vue'),
     detail: () => import('@/components/lineup/Detail.vue')
   },
   computed: {
@@ -14,7 +14,7 @@ export default {
       if (this.$route.params.artist)
         return 'detail'
 
-      return 'stage'
+      return 'areas'
     }
   }
 }

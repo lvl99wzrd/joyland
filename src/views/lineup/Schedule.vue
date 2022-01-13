@@ -1,6 +1,6 @@
 <template>
   <div class="lineup-schedule">
-    <div class="lineup-schedule__poster" />
+    <div class="content" v-html="app.lineup.schedule" />
   </div>
 </template>
 
@@ -12,12 +12,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.lineup-schedule {
-  &__poster {
-    @apply bg-gray-400 w-full h-0;
-    padding-top: 125%;
-  }
-}
-</style>

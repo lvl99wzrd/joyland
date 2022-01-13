@@ -1,6 +1,6 @@
 <template>
   <div class="lineup-past">
-    Past Line-Up
+    <div class="content" v-html="app.lineup.past" />
   </div>
 </template>
 
@@ -12,7 +12,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

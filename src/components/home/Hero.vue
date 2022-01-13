@@ -1,20 +1,37 @@
 <template>
-  <div ref="heroLand" class="home-hero" @mousemove="hoverParallax">
-    <div ref="heroDots" class="home-hero__dots hero-bg-part" />
-    <div ref="heroPlanets" class="home-hero__planets hero-bg-part" />
-    <div ref="heroStars" class="home-hero__stars hero-bg-part" />
-    <div ref="heroPlantsLeft" class="home-hero__plantsLeft hero-bg-part bg-no-repeat" />
-    <div ref="heroPlantsRight" class="home-hero__plantsRight hero-bg-part bg-no-repeat" />
-    <div ref="heroOrangutan" class="home-hero__orangutan hero-bg-part bg-no-repeat" />
-    <div ref="heroBunny" class="home-hero__bunny hero-bg-part bg-no-repeat" />
-    <div ref="heroPlants" class="home-hero__plants hero-bg-part bg-repeat-x" />
-    <div class="container pointer-events-none h-full z-10">
-      <div class="flex items-center justify-center w-full h-full">
-        <div class="w-2/3 md:w-1/3">
-          <div class="w-full text-white">
-            <app-logo />
-            <div class="font-display text-4xl uppercase text-center text-white mt-4" v-html="content.event_date" />
-            <div class="font-display text-xl text-center text-white mt-2" v-html="content.event_location" />
+  <div>
+    <div v-if="content.background.horizontal || content.background.vertical" class="home-hero">
+      <img :src="content.background.horizontal" class="absolute top-0 left-0 object-cover object-center w-full h-full z-0 hidden md:block">
+      <img :src="content.background.vertical" class="absolute top-0 left-0 object-cover object-center w-full h-full z-0 md:hidden">
+      <div class="relative container pointer-events-none h-full z-10">
+        <div class="flex items-center justify-center w-full h-full">
+          <div class="w-2/3 md:w-1/3">
+            <div class="w-full text-white">
+              <app-logo />
+              <div class="font-display text-4xl uppercase text-center text-white mt-4" v-html="content.event_date" />
+              <div class="font-display text-xl text-center text-white mt-2" v-html="content.event_location" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div v-else ref="heroLand" class="home-hero home-hero__default-bg" @mousemove="hoverParallax">
+      <div ref="heroDots" class="home-hero__dots hero-bg-part" />
+      <div ref="heroPlanets" class="home-hero__planets hero-bg-part" />
+      <div ref="heroStars" class="home-hero__stars hero-bg-part" />
+      <div ref="heroPlantsLeft" class="home-hero__plantsLeft hero-bg-part bg-no-repeat" />
+      <div ref="heroPlantsRight" class="home-hero__plantsRight hero-bg-part bg-no-repeat" />
+      <div ref="heroOrangutan" class="home-hero__orangutan hero-bg-part bg-no-repeat" />
+      <div ref="heroBunny" class="home-hero__bunny hero-bg-part bg-no-repeat" />
+      <div ref="heroPlants" class="home-hero__plants hero-bg-part bg-repeat-x" />
+      <div class="container pointer-events-none h-full z-10">
+        <div class="flex items-center justify-center w-full h-full">
+          <div class="w-2/3 md:w-1/3">
+            <div class="w-full text-white">
+              <app-logo />
+              <div class="font-display text-4xl uppercase text-center text-white mt-4" v-html="content.event_date" />
+              <div class="font-display text-xl text-center text-white mt-2" v-html="content.event_location" />
+            </div>
           </div>
         </div>
       </div>
@@ -35,6 +52,10 @@ export default {
       type: Object,
       default() {
         return {
+          background: {
+            horizontal: null,
+            vertical: null
+          },
           event_date: '',
           event_location: ''
         }
@@ -62,12 +83,12 @@ export default {
 
 <style lang="scss" scoped>
 .home-hero {
-  @apply relative w-full bg-gray-300 z-10;
+  @apply relative w-full bg-gray-300 z-10 bg-cover bg-no-repeat bg-center;
   height: calc(100vh - 4rem);
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('~@/assets/img/hero-far.png');
+
+  &__default-bg {
+    background-image: url('~@/assets/img/hero-far.png');
+  }
 
   @screen md {
     height: calc(100vh - 5rem);
