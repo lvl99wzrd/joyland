@@ -44,8 +44,8 @@ function joy_get_lineup_data( $post = 0 ) {
     'area'     => $area,
     'playlist' => get_field( 'playlist', $post->ID ),
     'schedule' => array(
-      'date'     => date( 'c', strtotime( $schedule ) ),
-      'date_gmt' => get_gmt_from_date( $schedule, 'c' ),
+      'date'     => $schedule ? date( 'c', strtotime( $schedule ) ) : null,
+      'date_gmt' => $schedule ? get_gmt_from_date( $schedule, 'c' ) : null,
     ),
   );
 

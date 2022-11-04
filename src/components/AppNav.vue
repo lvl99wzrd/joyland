@@ -1,12 +1,22 @@
 <template>
   <div :class="['app-nav', { 'is-visible': offcanvas }]">
     <div class="app-menu">
-      <router-link to="/lineup">Line-Up</router-link>
-      <router-link to="/area">Areas</router-link>
-      <router-link to="/info">Info</router-link>
-      <router-link to="/gallery">Gallery</router-link>
+      <router-link v-if="app.header.show_lineup" to="/lineup">
+        Line-Up
+      </router-link>
+      <router-link v-if="app.header.show_areas" to="/area">
+        Areas
+      </router-link>
+      <router-link v-if="app.header.show_info" to="/info">
+        Info
+      </router-link>
+      <router-link v-if="app.header.show_gallery" to="/gallery">
+        Gallery
+      </router-link>
       <a v-if="app.header.shop" :href="app.header.shop" target="_blank">Shop</a>
-      <router-link to="/digital">Digital</router-link>
+      <router-link v-if="app.header.show_digital" to="/digital">
+        Digital
+      </router-link>
     </div>
     <div class="app-social">
       <a v-if="app.header.youtube" :href="app.header.youtube" target="_blank">

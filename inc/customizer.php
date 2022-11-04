@@ -11,6 +11,86 @@ function joy_customizer_settings( $wp_customize ) {
   );
   
   $wp_customize->add_setting(
+    'joy_lineup',
+    array(
+      'default' => 1,
+      'transport' => 'refresh',
+    )
+  );
+  $wp_customize->add_control(
+    'joy_lineup',
+    array(
+      'type' => 'checkbox',
+      'section' => 'joy_header',
+      'label' => __( "Show Line-Up", 'joy' ),
+    )
+  );
+  
+  $wp_customize->add_setting(
+    'joy_areas',
+    array(
+      'default' => 1,
+      'transport' => 'refresh',
+    )
+  );
+  $wp_customize->add_control(
+    'joy_areas',
+    array(
+      'type' => 'checkbox',
+      'section' => 'joy_header',
+      'label' => __( "Show Areas", 'joy' ),
+    )
+  );
+  
+  $wp_customize->add_setting(
+    'joy_info',
+    array(
+      'default' => 1,
+      'transport' => 'refresh',
+    )
+  );
+  $wp_customize->add_control(
+    'joy_info',
+    array(
+      'type' => 'checkbox',
+      'section' => 'joy_header',
+      'label' => __( "Show Info", 'joy' ),
+    )
+  );
+  
+  $wp_customize->add_setting(
+    'joy_gallery',
+    array(
+      'default' => 1,
+      'transport' => 'refresh',
+    )
+  );
+  $wp_customize->add_control(
+    'joy_gallery',
+    array(
+      'type' => 'checkbox',
+      'section' => 'joy_header',
+      'label' => __( "Show Gallery", 'joy' ),
+    )
+  );
+  
+  $wp_customize->add_setting(
+    'joy_digital',
+    array(
+      'default' => 1,
+      'transport' => 'refresh',
+    )
+  );
+  $wp_customize->add_control(
+    'joy_digital',
+    array(
+      'type' => 'checkbox',
+      'section' => 'joy_header',
+      'label' => __( "Show Digital", 'joy' ),
+    )
+  );
+  
+  $wp_customize->add_setting(
     'joy_shop',
     array(
       'default' => '',

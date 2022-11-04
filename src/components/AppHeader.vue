@@ -7,14 +7,18 @@
         </button>
         <div class="px-4">
           <router-link class="app-logo" :to="{ name: 'Home' }">
-            <img v-if="app.site.logo" :src="app.site.logo">
+            <img v-if="app.site.logo" :src="app.site.logo" />
             <app-logo v-else class="w-28 md:w-40 h-auto" />
           </router-link>
         </div>
         <div class="flex-grow flex items-center">
           <app-nav />
         </div>
-        <a href="https://www.tiket.com/" target="_blank" class="ticket-link btn btn-brush btn-brush-blue-light">
+        <a
+          :href="app.header.ticket"
+          target="_blank"
+          class="ticket-link btn btn-brush btn-brush-blue-light"
+        >
           <span>Buy Tickets</span>
         </a>
       </div>
@@ -23,34 +27,39 @@
 </template>
 
 <script>
-import AppLogo from './AppLogo'
-import AppNav from './AppNav'
+import AppLogo from "./AppLogo";
+import AppNav from "./AppNav";
 
 export default {
-  name: 'AppHeader',
+  name: "AppHeader",
   components: {
     AppLogo,
-    AppNav
+    AppNav,
   },
   watch: {
-    '$route': function() {
-      this.toggleOffcanvas(false)
-    }
+    $route: function () {
+      this.toggleOffcanvas(false);
+    },
   },
   methods: {
     toggleNav() {
-      this.toggleOffcanvas(!this.offcanvas)
-    }
-  }
-}
+      this.toggleOffcanvas(!this.offcanvas);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 #appHeader {
   @apply fixed top-0 left-0 w-full bg-creme-dark z-50;
-  box-shadow: 0 4px 6px rgba(0,0,0,.15);
-  transition: all 600ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
-  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1); /* easeInOutQuart */
+  transition-timing-function: cubic-bezier(
+    0.77,
+    0,
+    0.175,
+    1
+  ); /* easeInOutQuart */
 
   &.offcanvas-shown {
     transform: translateX(13rem);
